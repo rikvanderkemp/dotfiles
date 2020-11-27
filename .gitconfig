@@ -1,0 +1,49 @@
+[user]
+	name = Rik van der Kemp
+	email = rik@peppered.com
+
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+
+[pull]
+	rebase = true
+
+
+[core]
+	autocrlf = input
+	filemode = false
+	pager = delta
+
+[interactive]
+	diffFilter = deta --color-only
+
+[delta]
+	features = side-by-side line-numbers decorations
+	whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none
+
+[alias]
+	st = status -s -b
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %Cblue[%an]%Creset' --abbrev-commit --date=relative
+	alias = config --get-regexp ^alias\\.
+	co = checkout
+	up = "!f() { echo 'Fetch & Pull' && git fetch --tags && git pull; }; f"
+	t = log --tags --simplify-by-decoration --pretty=format:'%Cred%d%Creset - %ai (%Cblue[%an]%Creset)' -n30
+	edit = config --edit --global
+	delmerged = "!f() { git branch --merged | grep -v \"^*\" | awk '{print $NF}' | xargs git branch -d; }; f"
+	pushf = push --force-with-lease
+	delgone = "!f() { git branch -vvv | grep gone | awk '{print $1}' | xargs git branch -d; }; f"
+	delgonef = "!f() { git branch -vvv | grep gone | awk '{print $1}' | xargs git branch -D; }; f"
+	mergeff = merge --ff
+	recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
+	prunetags = "!f() { git tag -l | xargs git tag -d; git fetch -t; }; f"
+	undo = reset HEAD^
+	wip = "!f() { git add . && git commit -m'WIP' --no-verify; }; f"	
+	cp = log --pretty=format:'🍒 %h --> %d %s' -1
