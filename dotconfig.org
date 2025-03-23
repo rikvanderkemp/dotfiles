@@ -25,6 +25,12 @@ normal = { family = "JetBrainsMono Nerd Font" }
 size = 14.0
 #+END_SRC
 
+*** Cursor
+#+BEGIN_SRC toml
+[cursor]
+style = { blinking = "On"  }
+#+END_SRC
+
 ** Fish
 :PROPERTIES:
 :header-args: :mkdirp yes :tangle ~/.config/fish/config.fish
@@ -56,8 +62,21 @@ set -gx PATH "$VOLTA_HOME/bin" $PATH
 #+END_SRC
 
 *** Misc
-#+BEGIN_SRC fish
+#+BEGIN_SRC fish :qq
 source "$HOME/.cargo/env.fish"
+#+END_SRC
+
+** Kitty
+:PROPERTIES:
+:header-args: :mkdirp yes :tangle ~/.config/kitty/kitty.conf
+:END:
+
+#+BEGIN_SRC fish
+#: Fonts {{{
+
+font_family      JetBrainsMono Nerd Font Mono
+bold_font        JetBrainsMono Nerd Font Mono Extra Bold
+bold_italic_font JetBrainsMono Nerd Font Mono Extra Bold Italic
 #+END_SRC
 
 

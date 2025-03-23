@@ -1,0 +1,55 @@
+#+title: Applications
+
+* Table of contents :TOC:
+- [[#terminal-emulators][Terminal Emulators]]
+  - [[#active][Active]]
+  - [[#not-in-use-anymore][Not in use anymore]]
+- [[#tui][TUI]]
+  - [[#active-1][Active]]
+- [[#editors][Editors]]
+  - [[#active-2][Active]]
+  - [[#not-in-use-anymore-1][Not in use anymore]]
+- [[#misc][Misc]]
+
+* Terminal Emulators
+
+** Active
+
+| Name      | Comments                                                      |
+|-----------+---------------------------------------------------------------|
+| Alacritty | I now use this with Zellij as a replacement for kitty/ghostty |
+
+** Not in use anymore
+
+| Name    | Comments                                                                |
+|---------+-------------------------------------------------------------------------|
+| Ghostty | replaced with Alacritty, alhtough nice seems slow and sluggish on macOs |
+| Kitty   | replaced with Alacritty, still awesome and useful feature is splitting  |
+
+* TUI
+
+** Active
+
+| Name   | Comments                  | Website                       |
+|--------+---------------------------+-------------------------------|
+| Gdu    | Disk usage analyzer in go | https://github.com/dundee/gdu |
+| Zellij |                           | https://zellij.dev            |
+
+* Editors
+
+** Active
+
+| Name  | Comments                                            |
+|-------+-----------------------------------------------------|
+| Emacs | Started Emacs again for my configurations et cetera |
+|       |                                                     |
+
+** Not in use anymore
+
+| Name         | Comments                                                                           |
+|--------------+------------------------------------------------------------------------------------|
+| NeoVim       | I cannot get used to NeoVim somehow                                                |
+| Helix editor | This is a promising editor but it feels far off to what I am used to at the moment |
+|              |                                                                                    |
+
+* Misc
