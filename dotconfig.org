@@ -6,7 +6,7 @@
 
 ** File system
 
-#+begin_src shell :exports no
+#+begin_src shell
 ~/Cloud/Hetzner <--> Hetzner:Synced
 ~/Cloud/S3Drive_Free <--> S3Drive_FreePlan_12GB:
 #+end_src
