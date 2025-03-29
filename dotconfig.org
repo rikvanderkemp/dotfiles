@@ -1,14 +1,14 @@
 #+title: Dotconfig
-#+STARTUP: show2levels
+#+STARTUP: show2levels entitiespretty align
 
-#+begin_src emacs-lisp :noweb yes :exports none :results silent
-(if (string= (system-name) "durkenburger")
-    (setq is-durkenburger-tangle "~/.config/fish/config.fish")
-  (setq is-durkenburger-tangle "no"))
 
-(if (string= (system-name) "qls-rik")
-    (setq is-qls-tangle "~/.config/fish/config.fish")
-  (setq is-qls-tangle "no"))
+* System configuration
+
+** File system
+
+#+begin_src shell :exports no
+~/Cloud/Hetzner <--> Hetzner:Synced
+~/Cloud/S3Drive_Free <--> S3Drive_FreePlan_12GB:
 #+end_src
 
 
@@ -52,11 +52,7 @@ alias ls "eza -l"
 #+end_src
 
 *** Paths
-#+begin_src fish
-#+end_src
-
-**** Durkenburger
-#+begin_src fish :tangle (eval is-durkenburger-tangle)
+#+begin_src fish :tangle (eval is-durkenburger)
 #set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
 #+end_src
@@ -64,6 +60,13 @@ set -gx PATH "$VOLTA_HOME/bin" $PATH
 *** Misc
 #+begin_src fish :qq
 source "$HOME/.cargo/env.fish"
+#+end_src
+
+*** Environment variables
+#+begin_src emacs-lisp (eval is-durkenburg)
+set -Ux ORG_DIRECTORY ~/Cloud/Hetzner/org
+set -Ux ORG_ROAM_DIRECTORY ~/Cloud/Hetzner/org-roam
+set -Ux SSH_AUTH_SOCK ~/.1password/agent.sock
 #+end_src
 
 ** Kitty
@@ -176,7 +179,7 @@ bold_italic_font JetBrainsMono Nerd Font Mono Extra Bold Italic
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
-       (spell +flyspell +aspell +everywhere) ; tasing you for misspelling mispelling
+       (spell +flyspell +aspell) ; tasing you for misspelling mispelling
        grammar           ; tasing grammar mistake every you make
 
        :tools
@@ -190,7 +193,7 @@ bold_italic_font JetBrainsMono Nerd Font Mono Extra Bold Italic
        ;;ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
        lookup              ; navigate your code and its documentation
-       ;;lsp               ; M-x vscode
+       lsp               ; M-x vscode
        magit             ; a git porcelain for Emacs
        ;;make              ; run make tasks from Emacs
        ;;pass              ; password manager for nerds
@@ -246,7 +249,7 @@ bold_italic_font JetBrainsMono Nerd Font Mono Extra Bold Italic
        ;;nim               ; python + lisp at the speed of c
        ;;nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
-       (org +crypt +pretty +dragndrop)                ; organize your plain life in plain text
+       (org +crypt +pretty +dragndrop +roam2)                ; organize your plain life in plain text
        ;;php               ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;graphviz          ; diagrams for confusing yourself even more
@@ -353,7 +356,19 @@ This does require the JetBrains Mono Nerd Font installed but relies on a built i
 #+begin_src emacs-lisp
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "/mnt/storagebox/org/")
+
+(when (not (getenv "ORG_DIRECTORY"))
+  (when (y-or-n-p "ORG_DIRECTORY is not set! Continue anyway? ")
+    (message "Continuing...")))
+
+(when (not (getenv "ORG_DIRECTORY"))
+  (when (y-or-n-p "ORG_DIRECTORY is not set! Continue anyway? ")
+    (message "Continuing...")))
+
+
+
+(setq org-directory (getenv "ORG_DIRECTORY"))
+
 #+end_src
 
 *** Package configuration
@@ -430,7 +445,15 @@ Setting up the four quarters
      ("3" "Not Important and Urgent" tags-todo "-important+urgent")
      ("4" "Not Important not Urgent" tags-todo "-important-urgent")))
 #+end_src
+*** Quality of life improvements
+#+begin_src emacs-lisp
+(setq display-line-numbers-type 'relative)
 
+;; Fix non-POSIX shell warning
+(setq shell-file-name (executable-find "bash"))
+(setq-default vterm-shell "/usr/bin/fish")
+(setq-default explicit-shell-file-name "/usr/bin/fish")
+#+end_src
 ** packages.el
 :PROPERTIES:
 :header-args: :mkdirp yes :tangle ~/.config/doom/packages.el
@@ -488,3 +511,11 @@ Setting up the four quarters
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 #+end_src
+
+
+* Footer :noexport:
+
+# Local Variables:
+# eval:(flyspell-mode 0)
+# eval: (setq is-durkenburger (if (string= (system-name) "durkenburger") "t" nil))
+# End:

@@ -1,6 +1,7 @@
 #+title: Applications
 
 * Table of contents :TOC:
+- [[#file-synchronization][File Synchronization]]
 - [[#terminal-emulators][Terminal Emulators]]
   - [[#active][Active]]
   - [[#not-in-use-anymore][Not in use anymore]]
@@ -9,7 +10,15 @@
 - [[#editors][Editors]]
   - [[#active-2][Active]]
   - [[#not-in-use-anymore-1][Not in use anymore]]
+- [[#utilities][Utilities]]
 - [[#macos-specific][macOs specific]]
+
+* File Synchronization
+
+| Name    | Comments                                                                                   | Website             |
+|---------+--------------------------------------------------------------------------------------------+---------------------|
+| S3Drive | File sync in favor of using mounts with Hetzner. Although mounts are great I prefer speed. | https://s3drive.app |
+|         |                                                                                            |                     |
 
 * Terminal Emulators
 
@@ -52,6 +61,15 @@
 | NeoVim       | I cannot get used to NeoVim somehow                                                |
 | Helix editor | This is a promising editor but it feels far off to what I am used to at the moment |
 |              |                                                                                    |
+
+* Utilities
+
+| Name               | Comments                                              |
+|--------------------+-------------------------------------------------------|
+| Fd-Find            | Fast file finder, need for emacs                      |
+| Fzf                | Fast file finder, handy because of interactive search |
+| wl-copy / wl-paste | Wayland copy and paste command line utilities         |
+| rclone             | File syncing across remotes                           |
 
 * macOs specific
 
