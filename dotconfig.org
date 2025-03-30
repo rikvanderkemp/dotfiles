@@ -350,14 +350,14 @@ This does require the JetBrains Mono Nerd Font installed but relies on a built i
   (when (y-or-n-p "ORG_DIRECTORY is not set! Continue anyway? ")
     (message "Continuing...")))
 
-(when (not (getenv "ORG_DIRECTORY"))
-  (when (y-or-n-p "ORG_DIRECTORY is not set! Continue anyway? ")
+(when (not (getenv "ORG_ROAM_DIRECTORY"))
+  (when (y-or-n-p "ORG_ROAM_DIRECTORY is not set! Continue anyway? ")
     (message "Continuing...")))
 
 
 
 (setq org-directory (getenv "ORG_DIRECTORY"))
-
+(setq org-roam-directory (getenv "ORG_ROAM_DIRECTORY"))
 #+end_src
 
 *** Package configuration
@@ -437,6 +437,11 @@ Setting up the four quarters
 *** Quality of life improvements
 #+begin_src emacs-lisp
 (setq display-line-numbers-type 'relative)
+
+;; Fix non-POSIX shell warning
+(setq shell-file-name (executable-find "bash"))
+(setq-default vterm-shell "/usr/bin/fish")
+(setq-default explicit-shell-file-name "/usr/bin/fish")
 #+end_src
 ** packages.el
 :PROPERTIES:
@@ -453,7 +458,7 @@ Setting up the four quarters
 
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
-;; (package! some-package)
+(package! sqlite3)
 
 ;; To install a package directly from a remote git repo, you must specify a
 ;; `:recipe'. You'll find documentation on what `:recipe' accepts here:
