@@ -73,7 +73,7 @@
 
 | Name         | Comments                                                             |                                                             |
 |--------------+----------------------------------------------------------------------+-------------------------------------------------------------|
-| Ampphetamine | Keeps your mac alive                                                 | https://apps.apple.com/us/app/amphetamine/id937984704?mt=12 |
+| Amphetamine  | Keeps your mac alive                                                 | https://apps.apple.com/us/app/amphetamine/id937984704?mt=12 |
 | DevToys      | Handy little toolbox with things like encoding /generators et cetera | https://devtoys.app                                         |
 | OrbStack     | Way faster docker desktop replacement, a must have imho              | https://orbstack.dev                                        |
 | Raycast      | (macOs) replacement for macOs launcher.                              | https://www.raycast.com                                     |
