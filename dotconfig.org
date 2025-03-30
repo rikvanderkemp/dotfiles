@@ -55,6 +55,7 @@ end
 #+begin_src fish
 #alias vim hx
 alias ls "eza -l"
+alias cat "batcat"
 #+end_src
 
 ** Paths

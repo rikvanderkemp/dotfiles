@@ -1,3 +1,7 @@
 #+title: Readme
 
 Start of a new version of my dotfiles 🤞 I can keep it up ...
+
+
+[[file:dotconfig.org][My dotfiles in org]]
+[[file:applications.org][Applications I use]]
