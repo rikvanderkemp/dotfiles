@@ -9,6 +9,7 @@
 - [[#editors][Editors]]
   - [[#active-2][Active]]
   - [[#not-in-use-anymore-1][Not in use anymore]]
+- [[#utilities][Utilities]]
 - [[#macos-specific][macOs specific]]
 
 * Terminal Emulators
@@ -52,6 +53,21 @@
 | NeoVim       | I cannot get used to NeoVim somehow                                                |
 | Helix editor | This is a promising editor but it feels far off to what I am used to at the moment |
 |              |                                                                                    |
+
+* Utilities
+
+| Name             | Comments                                |
+|------------------+-----------------------------------------|
+| FD-Find          | Fast file finder                        |
+| fzf              | Fast file finder  / interactive         |
+| ripgrep          | Find text fast                          |
+| pandoc           | File conversions, I use this with Emacs |
+| wl-copy/wl-paste | Wayland copy paste utilities            |
+| eza              | LS replacement                          |
+| bat              | Cat replacement with syntax highlight   |
+| shellcheck       | Shell linting                           |
+| tidy             | Html utility, use this with Emacs       |
+|                  |                                         |
 
 * macOs specific
 
