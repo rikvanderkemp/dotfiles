@@ -19,12 +19,11 @@
 
 ** Active
 
-| Name    | Comments                                             | Website |
-|---------+------------------------------------------------------+---------|
+| Name    | Comments                                         | Website |
+|---------+--------------------------------------------------+---------|
 | Vivaldi | Main browser, great with profiles and great sync |         |
-| Firefox | Use this for development                             |         |
-| Brave   | I use this as an alternative to Firefox              |         |
-|         |                                                      |         |
+| Firefox | Use this for development                         |         |
+| Brave   | I use this as an alternative to Firefox          |         |
 
 ** Not in use anymore
 
@@ -41,7 +40,6 @@
 | Name      | Comments                                                      |
 |-----------+---------------------------------------------------------------|
 | Alacritty | I now use this with Zellij as a replacement for kitty/ghostty |
-|           |                                                               |
 
 ** Not in use anymore
 
@@ -68,7 +66,6 @@
 | Emacs     | Started Emacs again for my configurations et cetera |
 | JetBrains | WebStorm / PhpStorm / RustRover all of them 💪     |
 | VSCodium  | VSCode but without M$-telemetry                     |
-|           |                                                     |
 
 ** Not in use anymore
 
@@ -76,32 +73,29 @@
 |--------------+------------------------------------------------------------------------------------+------------------|
 | NeoVim       | I cannot get used to NeoVim somehow                                                |                  |
 | Helix editor | This is a promising editor but it feels far off to what I am used to at the moment |                  |
-| Volta        | The hassle-free javascript tool manager                                            | https://volta.sh |
-|              |                                                                                    |                  |
 
 * Utilities
 
-| Name             | Comments                                |
-|------------------+-----------------------------------------|
-| FD-Find          | Fast file finder                        |
-| fzf              | Fast file finder  / interactive         |
-| ripgrep          | Find text fast                          |
-| pandoc           | File conversions, I use this with Emacs |
-| wl-copy/wl-paste | Wayland copy paste utilities            |
-| eza              | LS replacement                          |
-| bat              | Cat replacement with syntax highlight   |
-| shellcheck       | Shell linting                           |
-| tidy             | HTML utility, use this with Emacs       |
-| rclone           | Clone files across services             |
-|                  |                                         |
+| Name             | Comments                                |                  |
+|------------------+-----------------------------------------+------------------|
+| FD-Find          | Fast file finder                        |                  |
+| fzf              | Fast file finder  / interactive         |                  |
+| ripgrep          | Find text fast                          |                  |
+| pandoc           | File conversions, I use this with Emacs |                  |
+| wl-copy/wl-paste | Wayland copy paste utilities            |                  |
+| eza              | LS replacement                          |                  |
+| bat              | Cat replacement with syntax highlight   |                  |
+| shellcheck       | Shell linting                           |                  |
+| tidy             | HTML utility, use this with Emacs       |                  |
+| rclone           | Clone files across services             |                  |
+| Volta            | The hassle-free javascript tool manager | https://volta.sh |
 
 * macOs specific
 
-| Name         | Comments                                                             |                                                             |
-|--------------+----------------------------------------------------------------------+-------------------------------------------------------------|
-| Amphetamine  | Keeps your mac alive                                                 | https://apps.apple.com/us/app/amphetamine/id937984704?mt=12 |
-| DevToys      | Handy little toolbox with things like encoding /generators et cetera | https://devtoys.app                                         |
-| OrbStack     | Way faster docker desktop replacement, a must have imho              | https://orbstack.dev                                        |
-| Raycast      | (macOs) replacement for macOs launcher.                              | https://www.raycast.com                                     |
-| Rectangle    | Windows management that should've been built into macOs.             | https://rectangleapp.com                                    |
-|              |                                                                      |                                                             |
+| Name        | Comments                                                             |                                                             |
+|-------------+----------------------------------------------------------------------+-------------------------------------------------------------|
+| Amphetamine | Keeps your mac alive                                                 | https://apps.apple.com/us/app/amphetamine/id937984704?mt=12 |
+| DevToys     | Handy little toolbox with things like encoding /generators et cetera | https://devtoys.app                                         |
+| OrbStack    | Way faster docker desktop replacement, a must have imho              | https://orbstack.dev                                        |
+| Raycast     | (macOs) replacement for macOs launcher.                              | https://www.raycast.com                                     |
+| Rectangle   | Windows management that should've been built into macOs.             | https://rectangleapp.com                                    |
