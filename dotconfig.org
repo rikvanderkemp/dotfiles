@@ -1,31 +1,48 @@
 #+title: Dotconfig
 #+STARTUP: show2levels entitiespretty align
 
-* CLI
-** Alacritty
+* Table of contents :TOC:
+- [[#alacritty][Alacritty]]
+  - [[#font][Font]]
+  - [[#cursor][Cursor]]
+- [[#fish][Fish]]
+  - [[#interactive-mode-auto-start-zellij-for-instance][Interactive mode (auto-start Zellij for instance)]]
+  - [[#aliases][Aliases]]
+  - [[#paths][Paths]]
+  - [[#misc][Misc]]
+  - [[#environment-variables][Environment variables]]
+- [[#kitty][Kitty]]
+  - [[#font-1][Font]]
+- [[#doom-emacs][Doom Emacs]]
+  - [[#initel][init.el]]
+  - [[#configel][config.el]]
+  - [[#packagesel][packages.el]]
+
+* Alacritty
 :PROPERTIES:
 :header-args: :tangle ~/.alacritty.toml
 :END:
 
-*** Font
+** Font
 #+begin_src toml
 [font]
 normal = { family = "JetBrainsMono Nerd Font" }
 size = 14.0
 #+end_src
 
-*** Cursor
+** Cursor
 #+begin_src toml
 [cursor]
 style = { blinking = "On"  }
 #+end_src
 
-** Fish
+
+* Fish
 :PROPERTIES:
 :header-args: :mkdirp yes :tangle ~/.config/fish/config.fish
 :END:
 
-*** Interactive mode (auto-start Zellij for instance)
+** Interactive mode (auto-start Zellij for instance)
 
 #+begin_src fish
 if status is-interactive
@@ -33,39 +50,39 @@ if status is-interactive
 end
 #+end_src
 
-*** Aliases
+** Aliases
 
 #+begin_src fish
 #alias vim hx
 alias ls "eza -l"
 #+end_src
 
-*** Paths
+** Paths
 #+begin_src fish :tangle (eval is-durkenburger)
 #set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
 #+end_src
 
-*** Misc
+** Misc
 #+begin_src fish :qq
 source "$HOME/.cargo/env.fish"
 #+end_src
 
-*** Environment variables
+** Environment variables
 #+begin_src emacs-lisp (eval is-durkenburg)
 set -Ux ORG_DIRECTORY ~/MEGA/org
 set -Ux ORG_ROAM_DIRECTORY ~/MEGA/org-roam
 set -Ux SSH_AUTH_SOCK ~/.1password/agent.sock
 #+end_src
 
-** Kitty
+
+* Kitty
 :PROPERTIES:
 :header-args: :mkdirp yes :tangle ~/.config/kitty/kitty.conf
 :END:
 
+** Font
 #+begin_src fish
-#: Fonts {{{
-
 font_family      JetBrainsMono Nerd Font Mono
 bold_font        JetBrainsMono Nerd Font Mono Extra Bold
 bold_italic_font JetBrainsMono Nerd Font Mono Extra Bold Italic
