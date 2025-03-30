@@ -72,11 +72,12 @@
 
 ** Not in use anymore
 
-| Name         | Comments                                                                           |
-|--------------+------------------------------------------------------------------------------------|
-| NeoVim       | I cannot get used to NeoVim somehow                                                |
-| Helix editor | This is a promising editor but it feels far off to what I am used to at the moment |
-|              |                                                                                    |
+| Name         | Comments                                                                           | Website          |
+|--------------+------------------------------------------------------------------------------------+------------------|
+| NeoVim       | I cannot get used to NeoVim somehow                                                |                  |
+| Helix editor | This is a promising editor but it feels far off to what I am used to at the moment |                  |
+| Volta        | The hassle-free javascript tool manager                                            | https://volta.sh |
+|              |                                                                                    |                  |
 
 * Utilities
 
