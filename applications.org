@@ -1,16 +1,38 @@
 #+title: Applications
 
 * Table of contents :TOC:
-- [[#terminal-emulators][Terminal Emulators]]
+- [[#browsers][Browsers]]
   - [[#active][Active]]
   - [[#not-in-use-anymore][Not in use anymore]]
-- [[#tui][TUI]]
+- [[#terminal-emulators][Terminal Emulators]]
   - [[#active-1][Active]]
-- [[#editors][Editors]]
-  - [[#active-2][Active]]
   - [[#not-in-use-anymore-1][Not in use anymore]]
+- [[#tui][TUI]]
+  - [[#active-2][Active]]
+- [[#editors][Editors]]
+  - [[#active-3][Active]]
+  - [[#not-in-use-anymore-2][Not in use anymore]]
 - [[#utilities][Utilities]]
 - [[#macos-specific][macOs specific]]
+
+* Browsers
+
+** Active
+
+| Name    | Comments                                             | Website |
+|---------+------------------------------------------------------+---------|
+| Vivaldi | Main browser, great with profiles and great sync |         |
+| Firefox | Use this for development                             |         |
+| Brave   | I use this as an alternative to Firefox              |         |
+|         |                                                      |         |
+
+** Not in use anymore
+
+| Name        | Comments                                     | Website |
+|-------------+----------------------------------------------+---------|
+| Zen Browser | Great looking but do not like the tab layout |         |
+| Arc Browser | Abandoned by the company (shady practices)   |         |
+| Waterfox    | Does not play nice with 1password            |         |
 
 * Terminal Emulators
 
@@ -35,7 +57,7 @@
 | Name   | Comments                  | Website                       |
 |--------+---------------------------+-------------------------------|
 | Gdu    | Disk usage analyzer in go | https://github.com/dundee/gdu |
-| Zellij |                           | https://zellij.dev            |
+| Zellij | Tmuxer extraordinary      | https://zellij.dev            |
 
 * Editors
 
@@ -45,6 +67,8 @@
 |-----------+-----------------------------------------------------|
 | Emacs     | Started Emacs again for my configurations et cetera |
 | JetBrains | WebStorm / PhpStorm / RustRover all of them 💪     |
+| VSCodium  | VSCode but without M$-telemetry                     |
+|           |                                                     |
 
 ** Not in use anymore
 
@@ -66,7 +90,8 @@
 | eza              | LS replacement                          |
 | bat              | Cat replacement with syntax highlight   |
 | shellcheck       | Shell linting                           |
-| tidy             | Html utility, use this with Emacs       |
+| tidy             | HTML utility, use this with Emacs       |
+| rclone           | Clone files across services             |
 |                  |                                         |
 
 * macOs specific
