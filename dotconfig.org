@@ -71,8 +71,8 @@ source "$HOME/.cargo/env.fish"
 
 ** Environment variables
 #+begin_src emacs-lisp (eval is-durkenburg)
-set -Ux ORG_DIRECTORY ~/MEGA/org
-set -Ux ORG_ROAM_DIRECTORY ~/MEGA/org-roam
+set -Ux ORG_DIRECTORY ~/Dropbox/org
+set -Ux ORG_ROAM_DIRECTORY ~/Dropbox/org-roam
 set -Ux SSH_AUTH_SOCK ~/.1password/agent.sock
 #+end_src
 
@@ -130,17 +130,17 @@ bold_italic_font JetBrainsMono Nerd Font Mono Extra Bold Italic
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
        ;;ivy               ; a search engine for love and life
-       vertico           ; the search engine of the future
+       (vertico +icons)           ; the search engine of the future
 
        :ui
-       ;;deft              ; notational velocity for Emacs
+       deft              ; notational velocity for Emacs
        doom              ; what makes DOOM look the way it does
        doom-dashboard    ; a nifty splash screen for Emacs
        doom-quit         ; DOOM quit-message prompts when you quit Emacs
        (emoji +unicode)  ; 🙂
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        indent-guides     ; highlighted indent columns
-       ligatures         ; ligatures and symbols to make your code pretty again
+       (ligatures +extra)         ; ligatures and symbols to make your code pretty again
        minimap           ; show a map of the code on the side
        modeline          ; snazzy, Atom-inspired modeline, plus API
        ;;nav-flash         ; blink cursor line after big motions
@@ -166,7 +166,7 @@ bold_italic_font JetBrainsMono Nerd Font Mono Extra Bold Italic
        ;;multiple-cursors  ; editing in many places at once
        ;;objed             ; text object editing for the innocent
        ;;parinfer          ; turn lisp into python, sort of
-       ;;rotate-text       ; cycle region at point between text candidates
+       rotate-text       ; cycle region at point between text candidates
        snippets          ; my elves. They type so I don't have to
        word-wrap         ; soft wrapping with language-aware indent
 
@@ -461,6 +461,22 @@ Setting up the four quarters
 (setq-default vterm-shell "/usr/bin/fish")
 (setq-default explicit-shell-file-name "/usr/bin/fish")
 #+end_src
+*** Deft
+
+I'd like to use deft with org-roam. This is the example setup. Tweak when needed
+
+#+begin_src emacs-lisp
+(use-package deft
+  :after org
+  :bind
+  ("C-c n d" . deft)
+  :custom
+  (deft-recursive t)
+  (deft-use-filter-string-for-filename t)
+  (deft-default-extension "org")
+  (deft-directory org-roam-directory))
+#+end_src
+
 ** packages.el
 :PROPERTIES:
 :header-args: :mkdirp yes :tangle ~/.config/doom/packages.el
