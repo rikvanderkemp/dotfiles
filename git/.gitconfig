@@ -1,0 +1,27 @@
+[user]
+	name = Rik van der Kemp
+	email = rik@upto11.nl
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE62nnf0AYwmb6dAqyMYZEO/xx09n014boL1lAdW/PT0
+[init]
+	defaultBranch = main
+[core]
+	autocrlf = input
+[color]
+	ui = auto
+
+[log]
+  # Use abbrev SHAs whenever possible/relevant instead of full 40 chars
+  abbrevCommit = true
+  # Automatically --follow when given a single path
+	follow = true
+[push]
+  default = upstream
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign
+[commit]
+	gpgsign = true
+[pull]
+	rebase = true
+	ff = only
