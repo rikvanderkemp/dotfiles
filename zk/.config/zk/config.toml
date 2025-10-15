@@ -1,0 +1,33 @@
+# NOTEBOOK Settings
+[notebook]
+dir = '~/Dropbox/notes/'
+
+[note]
+language = 'en'
+filename = '{{format-date (date "now") "timestamp"}}-{{id}}-{{slug title}}'
+template = 'new.md'
+
+
+# GROUP OVERRIDES
+[group.journal]
+paths = ["journal/weekly", "journal/daily"]
+
+[group.journal.note]
+filename = "{{format-date now}}"
+
+
+[tool]
+editor = 'nvim'
+# Pager used to scroll through long output.
+pager = "less -FIRX"
+# Command used to preview a note during interactive fzf mode.
+fzf-preview = "bat -p --color always {-1}"
+shell = "/usr/bin/fish"
+
+[format.markdown]
+hashtags = true
+
+
+[alias]
+# Edit the last modified note.
+edlast = "zk edit --limit 1 --sort modified- $@"

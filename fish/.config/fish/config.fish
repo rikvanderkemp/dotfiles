@@ -7,6 +7,7 @@ else if type -q bat
 end
 
 set -gx PATH "$HOME/.dotnet" $PATH
+set -gx PATH "$HOME/.local/bin" $PATH
 
 set -Ux ORG_DIRECTORY ~/Dropbox/org
 set -Ux ORG_ROAM_DIRECTORY ~/Dropbox/org-roam
@@ -20,3 +21,7 @@ set -Ux LIBVIRT_DEFAULT_URI qemu:///system
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
 set -gx PATH "$HOME/.config/composer/vendor/bin" $PATH
+set -gx ZK_NOTEBOOK_DIR /home/rik/Dropbox/notes
+set -gx STOW_DIR /home/rik/.dotfiles
+
+oh-my-posh init fish --config M365Princess | source
