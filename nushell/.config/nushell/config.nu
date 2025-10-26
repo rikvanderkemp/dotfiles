@@ -17,7 +17,9 @@
 # options using:
 #     config nu --doc | nu-highlight | less -R
 
+use std/dirs shells-aliases *
+
 $env.config.buffer_editor = "nvim"
-$env.config.show_banner = false
+$env.config.show_banner = true
 
 oh-my-posh init nu --config '1_shell'
