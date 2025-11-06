@@ -1,5 +1,3 @@
-alias ls "lsd -l"
-
 if type -q batcat
     alias cat batcat
 else if type -q bat
@@ -24,4 +22,6 @@ set -gx PATH "$HOME/.config/composer/vendor/bin" $PATH
 set -gx ZK_NOTEBOOK_DIR /home/rik/Dropbox/notes
 set -gx STOW_DIR /home/rik/.dotfiles
 
-oh-my-posh init fish --config M365Princess | source
+#oh-my-posh init fish --config M365Princess | source
+#
+starship init fish | source
