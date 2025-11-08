@@ -21,3 +21,4 @@ $env.config.buffer_editor = "nvim"
 $env.config.show_banner = false
 
 oh-my-posh init nu --config '1_shell'
+source $"($nu.home-path)/.cargo/env.nu"

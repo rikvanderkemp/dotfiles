@@ -20,8 +20,9 @@ set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
 set -gx PATH "$HOME/.config/composer/vendor/bin" $PATH
 set -gx ZK_NOTEBOOK_DIR /home/rik/Dropbox/notes
-set -gx STOW_DIR /home/rik/.dotfiles
+set -gx STOW_DIR /home/rik/dotfiles
 
-#oh-my-posh init fish --config M365Princess | source
-#
-starship init fish | source
+source "$HOME/.cargo/env.fish"
+
+#starship init fish | source
+oh-my-posh init fish --config '1_shell' | source
