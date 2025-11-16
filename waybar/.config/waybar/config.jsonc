@@ -15,22 +15,8 @@
         "niri/window"
     ],
     "modules-right": [
-        //"mpd",
-//        "idle_inhibitor",
-        "pulseaudio",
-        "network",
-        "power-profiles-daemon",
-        //"cpu",
-        //"memory",
-        "temperature",
-        "backlight",
-        "keyboard-state",
-        "sway/language",
-        "battery",
-        "battery#bat2",
-        "clock",
-        "tray",
-        "custom/power"
+      "group/widgets",
+    "group/power"
     ],
     "keyboard-state": {
         "numlock": true,
@@ -200,5 +186,29 @@
   },
   "wlr/taskbar" : {
     "on-click" : "activate"
+  },
+    "group/widgets" : {
+     "orientation": "horizontal",
+     "modules" : [
+       "pulseaudio",
+        "network",
+        "power-profiles-daemon",
+        //"cpu",
+        //"memory",
+        "temperature",
+        "backlight",
+        "keyboard-state",
+        "sway/language",
+        "battery",
+        "battery#bat2",
+        "clock",
+        "tray",
+    ] 
+  },
+  "group/power" : {
+    "orientation": "horizontal",
+    "modules" : [
+      "custom/power"
+    ]
   }
 }

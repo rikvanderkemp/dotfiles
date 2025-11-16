@@ -20,15 +20,6 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: @text;
-}
-*/
-
 window#waybar.termite {
     background-color: @overlay1;
 }
@@ -102,12 +93,14 @@ button:hover {
     color: @text;
 }
 
+#power,
+#widgets,
 #tray,
 #taskbar,
 #window,
 #workspaces {
     margin: 0 4px;
-    border: 2px solid @lavender;
+    border: 1px solid @lavender;
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 20px;
@@ -123,6 +116,7 @@ window#waybar.empty #window {
   background-color: rgba(0,0,0,0.0);
 }
 
+#widgets,
 #workspaces {
   margin-right: 20px;
 }
@@ -166,7 +160,6 @@ window#waybar.empty #window {
 }
 
 #power-profiles-daemon {
-    padding-right: 15px;
 }
 
 #power-profiles-daemon.performance {
@@ -204,17 +197,6 @@ label:focus {
 #network.disconnected {
 }
 
-/*
-#pulseaudio {
-    background-color: @yellow;
-    color: @surface0;
-}
-
-#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
-}
-*/
 #wireplumber {
     background-color: #fff0f5;
     color: @surface0;
