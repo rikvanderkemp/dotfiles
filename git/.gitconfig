@@ -1,6 +1,6 @@
 [user]
 	name = Rik van der Kemp
-	email = rik@upto11.nl
+	email = rik@hanok.nl
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE62nnf0AYwmb6dAqyMYZEO/xx09n014boL1lAdW/PT0
 [init]
 	defaultBranch = main
@@ -25,3 +25,8 @@
 [pull]
 	rebase = true
 	ff = only
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

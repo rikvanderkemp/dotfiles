@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export CARAPACE_BRIDGES:zsh\x2cfish\x2cbash\x2cinshellisense
 SETUVAR --export CPPFLAGS:\x2dI/opt/homebrew/opt/php\x408\x2e3/include
 SETUVAR --export LDFLAGS:\x2dL/opt/homebrew/opt/php\x408\x2e3/lib
 SETUVAR --export LIBVIRT_DEFAULT_URI:qemu\x3a///system
@@ -44,3 +45,4 @@ SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:cyan
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
+SETUVAR fish_user_paths:/usr/local/go/bin

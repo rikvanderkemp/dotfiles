@@ -20,5 +20,15 @@
 $env.config.buffer_editor = "nvim"
 $env.config.show_banner = false
 
-oh-my-posh init nu --config '1_shell'
-source $"($nu.home-path)/.cargo/env.nu"
+
+
+## ${UserConfigDir}/nushell/env.nu
+$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
+mkdir $"($nu.cache-dir)"
+carapace _carapace nushell | save --force $"($nu.cache-dir)/carapace.nu"
+
+# ${UserConfigDir}/nushell/config.nu
+source $"($nu.cache-dir)/carapace.nu"
+
+
+

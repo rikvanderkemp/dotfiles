@@ -7,6 +7,8 @@ end
 set -gx PATH "$HOME/.dotnet" $PATH
 set -gx PATH "$HOME/.local/bin" $PATH
 
+fish_add_path /usr/local/go/bin
+
 set -Ux ORG_DIRECTORY ~/Dropbox/org
 set -Ux ORG_ROAM_DIRECTORY ~/Dropbox/org-roam
 set -Ux SSH_AUTH_SOCK ~/.1password/agent.sock
@@ -22,7 +24,17 @@ set -gx PATH "$HOME/.config/composer/vendor/bin" $PATH
 set -gx ZK_NOTEBOOK_DIR /home/rik/Dropbox/notes
 set -gx STOW_DIR /home/rik/dotfiles
 
-source "$HOME/.cargo/env.fish"
+# source "$HOME/.cargo/env.fish"
 
 #starship init fish | source
-oh-my-posh init fish --config '1_shell' | source
+#oh-my-posh init fish --config '1_shell' | source
+
+# ${UserConfigDir}/fish/config.fish
+#set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
+#carapace _carapace | source
+
+
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+thefuck --alias | source

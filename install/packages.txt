@@ -17,3 +17,6 @@ starship
 chaotic-aur/oh-my-posh-bin
 rustup
 aur/anytype-bin
+carapace-bin
+zoxide
+flemozi-bin
