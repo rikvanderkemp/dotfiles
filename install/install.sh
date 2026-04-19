@@ -32,6 +32,22 @@ stow_dotfiles() {
         mkdir -p "$BACKUP_DIR"
     fi
 
+    backup_conflicts() {
+        local package_dir=$1
+
+        while IFS= read -r source_path; do
+            local relative_path=${source_path#"$package_dir"/}
+            local target_path="$HOME/$relative_path"
+            local backup_path="$BACKUP_DIR/$relative_path"
+
+            if [[ -e "$target_path" && ! -L "$target_path" ]]; then
+                echo "⚠️  Backing up existing $target_path to $backup_path"
+                mkdir -p "$(dirname "$backup_path")"
+                mv "$target_path" "$backup_path"
+            fi
+        done < <(find "$package_dir" \( -type f -o -type l \) | sort)
+    }
+
     # Loop through all directories except 'install'
     for dir in */; do
         # Remove trailing slash
@@ -43,24 +59,10 @@ stow_dotfiles() {
             continue
         fi
 
-        # Check for conflicting files/directories in .config
-        if [[ -d "$dir/.config" ]]; then
-            for config_dir in "$dir/.config"/*; do
-                if [[ -e "$config_dir" ]]; then
-                    config_name=$(basename "$config_dir")
-                    target="$HOME/.config/$config_name"
-
-                    # If target exists, is not a symlink, and is a directory
-                    if [[ -e "$target" && ! -L "$target" ]]; then
-                        echo "⚠️  Backing up existing $target to $BACKUP_DIR/$config_name"
-                        mv "$target" "$BACKUP_DIR/$config_name"
-                    fi
-                fi
-            done
-        fi
+        backup_conflicts "$dir"
 
         echo "📌 Stowing $dir..."
-        stow -S "$dir"
+        stow -t "$HOME" -S "$dir"
     done
 
     echo "✅ All dotfiles stowed successfully!"
